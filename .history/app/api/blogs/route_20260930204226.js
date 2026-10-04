@@ -1,0 +1,9 @@
+import { connectDB } from "@/app/config/db";
+
+export async function POST(request){
+    let data = await request.json();
+    await connectDB();
+    return Response.json({
+        message:'Blog successfully added !'
+    })
+}
